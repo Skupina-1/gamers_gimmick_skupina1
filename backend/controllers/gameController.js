@@ -10,6 +10,17 @@ exports.getGames = async (req, res) => {
   }
 };
 
+// GET a game by ID
+exports.getGameById = async (req, res) => {
+  try {
+    const game = await Game.findById(req.params.id);
+    if (!game) return res.status(404).json({ message: "Game not found" });
+    res.json(game);
+  } catch (err) {
+    res.status(500).json({ message: "Server error" });
+  }
+};
+
 // POST a new game
 exports.addGame = async (req, res) => {
   const game = new Game(req.body);

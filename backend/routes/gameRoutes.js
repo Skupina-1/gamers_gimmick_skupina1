@@ -5,10 +5,14 @@ const {
   addGame,
   deleteGame,
   updateGame,
+  getGameById,
 } = require("../controllers/gameController");
 
 //GET /api/games
 router.get("/", getGames);
+
+//GET /api/games/:id
+router.get("/:id", getGameById);
 
 //POST /api/games/add
 router.post("/add", addGame);

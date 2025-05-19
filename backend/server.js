@@ -24,6 +24,11 @@ app.use("/api/basket", basketRoutes);
 const userRoutes = require("./routes/userRoutes");
 app.use("/api/users", userRoutes);
 
+app.use("/images", express.static("public/images"));
+
+const transactionsRoutes = require("./routes/transactionsRoutes");
+app.use("/api/transactions", transactionsRoutes);
+
 //server
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
