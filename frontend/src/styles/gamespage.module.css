@@ -1,0 +1,35 @@
+.gamesHubContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.title {
+  margin-bottom: 2rem;
+}
+.gamesList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.gameCard {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  padding: 2rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s;
+}
+.gameCard:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.gameImage {
+  display: block;
+  margin: 0 auto 1rem auto;
+  border-radius: 8px;
+  object-fit: cover;
+  width: 220px;
+  height: 220px;
+}

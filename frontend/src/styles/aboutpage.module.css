@@ -1,0 +1,286 @@
+/* Base styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #6366f1;
+  color: white;
+  padding: 5rem 1rem;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Section Styles */
+.section {
+  padding: 5rem 1rem;
+}
+
+.altSection {
+  background-color: #f9fafb;
+}
+
+.sectionContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+.centeredTitle {
+  text-align: center;
+}
+
+.sectionDescription {
+  text-align: center;
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.paragraph {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.image {
+  border-radius: 0.5rem;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* About&Mission Section */
+.missionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.missionText,
+.missionImage {
+  flex: 1;
+}
+
+/* Why Choose Us Section */
+.storyContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.storyText,
+.storyImage {
+  flex: 1;
+}
+
+/* Team Section */
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.teamMember {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.teamMemberImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.teamImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teamMemberName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.teamMemberRole {
+  font-size: 1rem;
+  color: #6366f1;
+  margin-bottom: 1rem;
+}
+
+.teamMemberBio {
+  font-size: 0.875rem;
+  color: #6b7280;
+  max-width: 300px;
+}
+
+/* Values Section */
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.valueCard {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+}
+
+.valueTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #6366f1;
+}
+
+.valueDescription {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contactIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #6366f1;
+  margin-top: 0.25rem;
+}
+
+.contactTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.contactText {
+  font-size: 1rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.contactMap {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-left: 1rem;
+  padding-right: 3rem;
+}
+.contactMap img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .missionContainer,
+  .storyContainer {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .storyContainer {
+    flex-direction: row-reverse;
+  }
+
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .valuesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contactContainer {
+    flex-direction: row;
+  }
+
+  .contactInfo,
+  .contactForm {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .teamGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .valuesGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
